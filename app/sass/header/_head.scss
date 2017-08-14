@@ -1,18 +1,18 @@
 .header {
   display: flex;
   flex-flow: column nowrap;
-  &__top {
-    margin: 20px 0;
-  }
   &__top > .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    >a {
+  }
+  &__top {
+    margin: 20px 0;
+    a {
       display: block;
       position: relative;
-      color: blue;
+      color: #4ea7c5;
       text-decoration: underline;
       font-size: 14px;
       img {
@@ -28,10 +28,12 @@
         left: 8px;
         top: -5px;
         width: 15px;
+        line-height:10px;
         padding-left: 3px;
-        padding-bottom: 4px;
+        padding-top: 1px;
         height: 15px;
-        background-color: yellow;
+        background-color: #f89111;
+        color: #fff;
         box-sizing: border-box;
       }
     }
@@ -50,10 +52,10 @@
         color: $yellow;
       }
     }
-  }
-  &__bottom {
-    background-color: $yellow;
-    padding: 10px 0;
+    .profile {
+      font-size: 16px;
+      font-weight: 700;
+    }
   }
   &__bottom > .container{
     display: flex;
@@ -61,5 +63,31 @@
     align-items: center;
     align-content: center;
 
+  }
+  &__bottom {
+    background-color: $yellow;
+    padding: 15px 0;
+    &--left {
+      width: 50%;
+      display: flex;
+      justify-content:flex-start;
+      p {
+        margin: 0;
+        span {
+          border-bottom: 1px dashed $grey;
+          color: $grey;
+          font-weight: 900;
+        }
+      }
+    }
+    &--right {
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      a {
+        font-size: 16px;
+        color: #000;
+      }
+    }
   }
 }
