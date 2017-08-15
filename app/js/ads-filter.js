@@ -1,6 +1,7 @@
 $(document).ready(function () {
     //////ФИЛЬТР ПОИСКА ОБЪЯВЛЕНИЙ
     $('.main-filter--region').click(function (event) {//при клике на элемент с классом "регион"
+        $('.main-filter--city-list').slideUp();
         var RegionList = $(this).next('.main-filter--region-list');//находим ближайший список регионов
         if (RegionList.is(':visible')) {//при видимости списка регионов
             $('.main-filter--city-list').hide('fast');//мы скрываем все элементы с нужным классом
@@ -16,7 +17,8 @@ $(document).ready(function () {
         $('.main-filter--city span:last-of-type').text('Выбрать город');
     });
     $(document).on('click', '.main-filter--city', function () {
-       $('.main-filter--city-list').slideToggle();
+        $('.main-filter--region-list').slideUp();
+        $('.main-filter--city-list').slideToggle();
     });
     $(document).on('click', '.main-filter--city-list span', function () {
         $('.main-filter--city-list').slideToggle();
