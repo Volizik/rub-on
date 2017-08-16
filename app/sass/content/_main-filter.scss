@@ -73,6 +73,7 @@
     text-align: right;
     height: 45px;
     margin-left: 20px;
+    z-index: 5;
     //overflow: hidden;
     input {
       position: relative;
@@ -113,6 +114,25 @@
     position: absolute;
     background: #fff;
     top: 55px;
+    border: 1px solid $grey;
+    width: calc(100% - 100px);
+    left: 0;
+    display: none;
+    span {
+      width: 33%;
+      position: relative;
+      float: left;
+      box-sizing: border-box;
+      text-align: center;
+      cursor: pointer;
+      display: block;
+      padding: 10px;
+    }
+  }
+  &--russia-list {
+    position: absolute;
+    background: #fff;
+    top: 105px;
     border: 1px solid $grey;
     width: calc(100% - 100px);
     left: 0;
