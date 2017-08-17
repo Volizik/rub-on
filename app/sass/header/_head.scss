@@ -9,6 +9,12 @@
   }
   &__top {
     margin: 20px 0;
+    .logo {
+      width: 100px;
+      img {
+        max-width: 100%;
+      }
+    }
     a {
       display: block;
       position: relative;

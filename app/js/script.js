@@ -46,5 +46,34 @@ $(function () {
 
 
 
+    //slick slider fop main page slider-1___________________________________________________
+    $('.main-slider__body').slick({
+        centerMode: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: false,
+                    centerPadding: '40px',
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    centerPadding: '40px',
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+    //end slick slider fop main page slider-1_________________________________________________
+
 });
 
