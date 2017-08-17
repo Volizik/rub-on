@@ -17,6 +17,11 @@
       font-size: 16px;
       text-transform: uppercase;
       margin: 15px 0;
+      @include breakpoint(max-width 500px) {
+        width: 100%;
+        padding-left: 10px;
+        text-align: center;
+      }
     }
     a {
       position: relative;
@@ -27,6 +32,12 @@
       color: $blue;
       text-transform: lowercase;
       margin: 15px 0;
+      @include breakpoint(max-width 500px) {
+        margin-top: -10px;
+        font-size: 14px;
+        color: #777;
+        padding-right: 20px;
+      }
     }
   }
   &__body {
@@ -37,6 +48,19 @@
       position: relative;
       box-sizing: border-box;
       padding: 20px;
+      @include breakpoint(max-width 500px) {
+        display: none;
+        padding: 40px;
+        &:nth-of-type(1) {
+          display: block;
+        }
+        &:nth-of-type(2) {
+          display: block;
+        }
+        &:nth-of-type(3) {
+          display: block;
+        }
+      }
       img {
         width: 100%;
         margin: 0 auto;
@@ -49,6 +73,9 @@
         font-style: italic;
         color: $blue;
         margin: 5px 0;
+        @include breakpoint(max-width 500px) {
+          width: 100%;
+        }
       }
       p {
         position: relative;

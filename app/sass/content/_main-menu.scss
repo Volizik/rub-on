@@ -2,31 +2,123 @@
   position: relative;
   width: 100%;
   float: left;
-  .row {
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 20px 0;
+  &__categories {
+    display: flex;
+    flex-flow: row wrap;
   }
   &__item {
     position: relative;
-    float: left;
+    //float: left;
     width: 20%;
     cursor: pointer;
+    margin: 20px 0;
+    //----------------------
+    &:nth-of-type(1) {
+      order: 1;
+    }
+    &:nth-of-type(2) {
+      order: 1;
+    }
+
+    //----------------------------
+    &:nth-of-type(5) {
+      order: 1;
+    }
+    &:nth-of-type(6) {
+      order: 1;
+    }
+
+    //-----------------------------
+    &:nth-of-type(9) {
+      order: 1;
+    }
+    &:nth-of-type(10) {
+      order: 3;
+    }
+
+    //-------------------------------
+    &:nth-of-type(13) {
+      order: 3;
+    }
+    &:nth-of-type(14) {
+      order: 3;
+    }
+
+    //-------------------------------
+    &:nth-of-type(17) {
+      order: 3;
+    }
+    &:nth-of-type(18) {
+      order: 3;
+    }
+
+    @include breakpoint(max-width 992px) {
+      width: 50%;
+
+      //----------------------
+      &:nth-of-type(1) {
+        order: 1;
+      }
+      &:nth-of-type(2) {
+        order: 1;
+      }
+
+      //----------------------------
+      &:nth-of-type(5) {
+        order: 3;
+      }
+      &:nth-of-type(6) {
+        order: 3;
+      }
+
+      //-----------------------------
+      &:nth-of-type(9) {
+        order: 5;
+      }
+      &:nth-of-type(10) {
+        order: 5;
+      }
+
+      //-------------------------------
+      &:nth-of-type(13) {
+        order: 7;
+      }
+      &:nth-of-type(14) {
+        order: 7;
+      }
+
+      //-------------------------------
+      &:nth-of-type(17) {
+        order: 9;
+      }
+      &:nth-of-type(18) {
+        order: 9;
+      }
+    }
     &:hover p {
       color: $blue;
     }
     img {
+      display: block;
       height: 50px;
       width: 75px;
       object-fit: none;
       position: relative;
       float: left;
+      @include  breakpoint(max-width 500px) {
+        height: 30px;
+        width: 40px;
+        max-width: 100%;
+        object-fit: fill;
+      }
     }
     p {
       font-weight: 600;
       font-size: 15px;
       color: #000;
+      @include  breakpoint(max-width 500px) {
+        font-size: 13px;
+      }
     }
   }
   &__item-list {
@@ -34,11 +126,84 @@
     width: 100%;
     position: relative;
     float: left;
-    margin-top: 15px;
+    margin: 15px 0;
     padding: 5px 50px;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: #f4f3f3;
+    //-----------------------------
+    &:nth-of-type(3) {
+      order: 2;
+    }
+    &:nth-of-type(4) {
+      order: 2;
+    }
+    //------------------------------
+    &:nth-of-type(7) {
+      order: 2;
+    }
+    &:nth-of-type(8) {
+      order: 2;
+    }
+    //-------------------------------
+    &:nth-of-type(11) {
+      order: 2;
+    }
+    &:nth-of-type(12) {
+      order: 4;
+    }
+    //-------------------------------
+    &:nth-of-type(15) {
+      order: 4;
+    }
+    &:nth-of-type(16) {
+      order: 4;
+    }
+    //-------------------------------
+    &:nth-of-type(19) {
+      order: 4;
+    }
+    &:nth-of-type(20) {
+      order: 4;
+    }
+    @include breakpoint(max-width 992px) {
+      &:nth-of-type(3) {
+        order: 2;
+      }
+      &:nth-of-type(4) {
+        order: 2;
+      }
+      //------------------------------
+      &:nth-of-type(7) {
+        order: 4;
+      }
+      &:nth-of-type(8) {
+        order: 4;
+      }
+      //-------------------------------
+      &:nth-of-type(11) {
+        order: 6;
+      }
+      &:nth-of-type(12) {
+        order: 6;
+      }
+      //-------------------------------
+      &:nth-of-type(15) {
+        order: 8;
+      }
+      &:nth-of-type(16) {
+        order: 8;
+      }
+      //-------------------------------
+      &:nth-of-type(19) {
+        order: 10;
+      }
+      &:nth-of-type(20) {
+        order: 10;
+      }
+    }
+
+
     >span {
       position: absolute;
       top: -14px;
@@ -75,6 +240,12 @@
         color: $blue;
         font-size: 14px;
         padding-bottom: 5px;
+        @include breakpoint(max-width 992px) {
+          width: 50%;
+        }
+        @include breakpoint(max-width 500px) {
+          width: 100%;
+        }
       }
     }
   }

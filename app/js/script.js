@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
 
 
     //for btn in main-filter (Выбрать категорию)--------------------------------------------------
@@ -47,33 +47,36 @@ $(function () {
 
 
     //slick slider fop main page slider-1___________________________________________________
-    $('.main-slider__body').slick({
-        centerMode: false,
-        slidesToShow: 6,
-        slidesToScroll: 1,
-        swipeToSlide: true,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: false,
-                    centerPadding: '40px',
-                    slidesToShow: 3
+    if (window.innerWidth > 500) {
+
+        $('.main-slider__body').slick({
+            centerMode: false,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            swipeToSlide: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        arrows: false,
+                        centerMode: false,
+                        centerPadding: '40px'
+                    }
                 }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
+            ]
+        });
+    }
     //end slick slider fop main page slider-1_________________________________________________
 
+
+    //toggle mobile menu--------------------------------------------------------------
+    $(document).on('click', '.header__menu-mobile--btn', function () {
+        $('.header__menu-mobile').slideToggle();
+    });
+    $(document).on('click', '.header__menu-mobile a', function () {
+        $('.header__menu-mobile').slideToggle();
+    });
+    //end toggle mobile menu------------------------------------------------------------
 });
 

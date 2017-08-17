@@ -13,6 +13,17 @@
     text-transform: uppercase;
     max-width: 900px;
     margin: 45px auto 15px;
+    @include breakpoint(max-width 992px) {
+      font-size: 24px;
+      margin-top: 20px;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    @include breakpoint(max-width 400px) {
+      font-size: 18px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -40,6 +51,9 @@
     color: #fff;
     margin-top: 0;
     margin-bottom: 20px;
+    @include breakpoint(max-width 992px) {
+      display: none;
+    }
   }
   &__block {
     position: relative;
@@ -47,16 +61,34 @@
     width: 50%;
     box-sizing: border-box;
     padding: 10px 50px 10px 100px;
-
+    &:first-of-type {
+      a {
+        &:hover {
+          background: -webkit-gradient(linear,left top,left bottom,from(#626f7b),to(#334a51));
+          background: -webkit-linear-gradient(#626f7b,#334a51);
+          background: -o-linear-gradient(#626f7b,#334a51);
+          background: linear-gradient(#626f7b,#334a51);
+        }
+      }
+    }
     &:last-child {
       border-left: 2px dashed #fff;
       padding: 10px 100px 10px 50px;
       a {
         background-color: $yellow;
         color: $grey;
+        &:hover {
+          background: -webkit-gradient(linear,left top,left bottom,from(#f7e896),to(#fff6c4));
+          background: -webkit-linear-gradient(#f7e896,#fff6c4);
+          background: -o-linear-gradient(#f7e896,#fff6c4);
+          background: linear-gradient(#f7e896,#fff6c4);
+        }
       }
     }
-
+    @include breakpoint(max-width 992px) {
+      padding: 10px 0!important;
+      border: none!important;
+    }
     a {
       text-transform: uppercase;
       display: inline-block;
@@ -67,7 +99,14 @@
       border-radius: 30px;
       font-size: 16px;
       font-weight: 700;
-
+      @include breakpoint(max-width 992px) {
+        font-size: 12px;
+        padding: 10px 30px;
+      }
+      @include breakpoint(max-width 400px) {
+        font-size: 8px;
+        padding: 10px 15px;
+      }
     }
     p {
       font-size: 16px;
