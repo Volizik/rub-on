@@ -70,43 +70,51 @@
 
 <!-- main container-->
 
-<!-- start authorization.html-->
-<div class="authorization">
+<!-- start registration.html-->
+<div class="registration">
     <div class="container">
 
-        <div class="authorization__form">
+        <div class="registration__form">
             <form>
-                <h2>Авторизоваться</h2>
-                <div class="authorization__form--row">
-                    <input type="text" placeholder="Введите login" required>
+                <h2>Зарегистрироваться</h2>
+                <div class="registration__form--row">
+                    <input type="text" placeholder="Введите ваш email" required>
                     <span class="form-error"></span>
                     <b>*</b>
                 </div>
-                <div class="authorization__form--row">
-                    <input type="text" placeholder="Введите пароль" required>
+                <div class="registration__form--row">
+                    <input type="text" placeholder="Введите ваш login" required>
                     <span class="form-error"></span>
                     <b>*</b>
                 </div>
-                <div class="authorization__form--row">
-                    <a href="/registration.html" class="authorization--reg">Нет аккаунта? Зарегистрируйтесь!</a>
+                <div class="registration__form--row">
+                    <input type="text" placeholder="Введите ваш пароль" required>
+                    <span class="form-error"></span>
+                    <b>*</b>
+                </div>
+                <div class="registration__form--row">
                     <input type="checkbox" id="remember-me">
-                    <label for="remember-me">Запомнить меня</label>
-                    <a href="#" class="authorization--problem">Не можете войти?</a>
+                    <p class="registration--rules">* Я соглашаюсь с
+                        <a href="#">правилами использования сервиса</a>
+                        , а также с передачей и обработкой моих данных в RUB-ON. Я подтверждаю своё совершеннолетие и ответственность за размещение объявления</p>
                 </div>
-                <div class="authorization__form--row">
-                    <button>Авторизоваться</button>
+                <div class="registration__form--row">
+                    <button>Зарегистрироваться</button>
                 </div>
-                <div class="authorization__form--row">
+                <div class="registration__form--row">
                     <p>или войдите через соц.сеть</p>
-                    <a class="authorization--social" href="#"><img src="img/icons/vk.png" alt=""></a>
-                    <a class="authorization--social" href="#"><img src="img/icons/fb.png" alt=""></a>
-                    <a class="authorization--social" href="#"><img src="img/icons/tw.png" alt=""></a>
-                    <a class="authorization--social" href="#"><img src="img/icons/g+.png" alt=""></a>
+                    <a class="registration--social" href="#"><img src="img/icons/vk.png" alt=""></a>
+                    <a class="registration--social" href="#"><img src="img/icons/fb.png" alt=""></a>
+                    <a class="registration--social" href="#"><img src="img/icons/tw.png" alt=""></a>
+                    <a class="registration--social" href="#"><img src="img/icons/g+.png" alt=""></a>
+                </div>
+                <div class="registration__form--row">
+                    <a href="authorization.html" class="registration--auth">Уже зарегистрированы? Авторизуйтесь!</a>
                 </div>
             </form>
         </div>
 
-        <div class="authorization__info">
+        <div class="registration__info">
             <p>Пароль нужен для входа в раздел <b>Мои объявления, Мои услуги, Мои магазины</b>
                 и другое, где вы сможете работать с объявлениями:</p>
             <ul>
@@ -121,7 +129,7 @@
 
     </div>
 </div>
-<!-- end authorization.html-->
+<!-- end registration.html-->
 
 <!-- close container-->
 
