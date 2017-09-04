@@ -21,7 +21,7 @@
       float: left;
       background-color: $grey;
       box-sizing: border-box;
-      padding: 10px 15px;
+      padding: 3px 15px;
       width: 270px;
       border-radius: 40px;
       z-index: 8;
@@ -100,7 +100,7 @@
     border: 3px solid #334a51;
     border-radius: 25px;
     text-align: right;
-    height: 45px;
+    height: 30px;
     margin-left: 20px;
     z-index: 5;
     @include breakpoint(max-width 992px) {
@@ -118,7 +118,7 @@
       width: 40%;
       margin-left: 20px;
       border: none;
-      height: 42px;
+      height: 28px;
       @include breakpoint(max-width 992px) {
         width: calc(100% - 150px);
       }
@@ -137,7 +137,7 @@
   &--region {
     position: relative;
     float: right;
-    padding: 13px 10px 0 10px;
+    padding: 5px 10px 0 10px;
     cursor: pointer;
     &:before {
       content: '';
@@ -146,7 +146,7 @@
       height: 25px;
       background-color: $grey;
       left: 0px;
-      top: 10px;
+      top: 3px;
     }
     span {
       position: relative;
@@ -159,7 +159,7 @@
   &--region-list {
     position: absolute;
     background: #fff;
-    top: 55px;
+    top: 40px;
     border: 1px solid $grey;
     width: calc(100% - 100px);
     left: 0;
@@ -178,7 +178,7 @@
   &--russia-list {
     position: absolute;
     background: #fff;
-    top: 105px;
+    top: 90px;
     border: 1px solid $grey;
     width: calc(100% - 100px);
     left: 0;
@@ -198,7 +198,7 @@
     display: none;
     position: relative;
     float: right;
-    padding: 13px 10px 0 10px;
+    padding: 5px 10px 0 10px;
     cursor: pointer;
     &:before {
       content: '';
@@ -207,7 +207,7 @@
       height: 25px;
       background-color: $grey;
       left: 0px;
-      top: 10px;
+      top: 3px;
     }
     span {
       position: relative;
@@ -220,7 +220,7 @@
   &--city-list {
     position: absolute;
     background: #fff;
-    top: 55px;
+    top: 40px;
     border: 1px solid $grey;
     width: calc(100% - 100px);
     left: 0;
@@ -247,14 +247,14 @@
     color: #fff;
     background-color: $grey;
     border: none;
-    padding: 13px 30px;
+    padding: 5px 30px;
     padding-left: 50px;
     border-radius: 25px;
     &:before {
       content: '';
       position: absolute;
       float: left;
-      height: 45px;
+      height: 30px;
       width: 40px;
       border-radius: 0 100px 100px 0/0 100px 100px 0;
       background-color: #fff;
