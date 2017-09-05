@@ -26,10 +26,12 @@
       align-items: center;
     }
     .logo {
+      display: block;
+      position: relative;
       width: 100px;
       img {
         max-width: 100%;
-        object-fit: none;
+        object-fit: cover;
       }
     }
     a {

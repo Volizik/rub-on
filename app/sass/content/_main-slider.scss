@@ -96,6 +96,9 @@
     width: 35px;
     transition: .5s;
     cursor: pointer;
+    &:before {
+      display: none;
+    }
   }
   .slick-prev {
     background: url(../img/icons/slick-prev.png) no-repeat center center;

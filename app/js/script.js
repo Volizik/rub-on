@@ -78,5 +78,24 @@ $(document).ready(function () {
         $('.header__menu-mobile').slideToggle();
     });
     //end toggle mobile menu------------------------------------------------------------
+
+
+    //add-ads popup---------------------------------------------------------------------
+    var memo = $('.memo');
+    var memoErr = $('.memo-error');
+    $(document).on('click', '.jsHint', function () {
+        memo.hide();
+        memoErr.hide();
+        if ($(this).is(':focus')) {
+            $(this).parent().find('.memo').show();
+        }
+    });
+    $(document).on('click', function (e) {
+        if ($(e.target).closest('.jsHint').length != 1) {
+            $('.memo').hide();
+        }
+    });
+    //!add-ads popup--------------------------------------------------------------------
+
 });
 

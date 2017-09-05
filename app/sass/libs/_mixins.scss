@@ -5,6 +5,43 @@
 	     -o-transition: all $t linear;
 	        transition: all $t linear;
 }
+@mixin hov-yellow{
+	&:hover{
+		color: #ffd800;
+	}
+}
+
+@mixin green-hov-rgba {
+	&:hover{
+		// background-color: rgba(60, 77, 82, 0.88);
+		background: linear-gradient(#626f7b, #334a51);
+		color: #fff;
+	}
+}
+@mixin bezh-hov {
+	&:hover{
+		background-color: $green;
+		color: #fff;
+	}
+}
+@mixin bezh-hov-rgba {
+	&:hover{
+    // background: linear-gradient(rgba(255, 255, 255, 0.5),#e7d571);
+    background: linear-gradient(#f7e896,#fff6c4);
+		// color: #fff;
+		color: $green;
+	}
+}
+@mixin h1-title{
+	font-size: 24px;
+	font-family: $or;
+	color: #424242;
+	padding-left: 0;
+	margin: 15px 0;
+	box-sizing: border-box;
+	float: left;
+	width: 100%;
+}
 
 @mixin overflow-img() {
 	overflow: hidden;
@@ -22,21 +59,6 @@
 	}
 }
 
-@mixin border-box{
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-}
-
-@mixin vertical-align {
-	position: relative;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
 // Breakpoints for each query
 $smartphone: 480px;
 $tabletPortrait: 767px;
@@ -46,28 +68,18 @@ $largeScreen: 1400px;
 
 @mixin respondTo($media) {
 	@if $media == smartphone {
-	  @media (min-width: $smartphone) {
-			@content;
-		}
+	  @media (min-width: $smartphone) { @content; }
 	}
 	@else if $media == tablet {
-	  @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) {
-			@content;
-		}
+	  @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) { @content; }
 	}
 	@else if $media == smallScreen {
-	  @media (min-width: $desktop) {
-			@content;
-		}
+	  @media (min-width: $desktop) { @content; }
 	}
 	@else if $media == desktop {
-	  @media (min-width: $desktop) {
-			@content;
-		}
+	  @media (min-width: $desktop) { @content; }
 	}
   @else if $media == largeScreen {
-    @media (min-width: $largeScreen) {
-			@content;
-		}
+    @media (min-width: $largeScreen) { @content; }
   }
 }
