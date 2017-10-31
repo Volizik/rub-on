@@ -29,6 +29,7 @@ var postcss = require('gulp-postcss'),//Блиотека-парсер стиле
     sorting = require('postcss-sorting'),
     fontmagic = require('postcss-font-magician'),
     fixes = require('postcss-fixes');
+var util = require('gulp-util');
 
 gulp.task('css-libs', function () { // Создаем таск css-libs
     var processors = [
@@ -107,7 +108,7 @@ gulp.task("clean", function (cb) {
 
 gulp.task('extend-pages', function () {
     gulp.src('./app/html/pages/*.html')
-        .pipe(extender({annotations: false, verbose: false})) // default options
+        .pipe(extender({annotations: true, verbose: false})) // default options
         .pipe(gulp.dest('./'))
         .pipe(browserSync.stream({}));
 });
@@ -121,7 +122,7 @@ gulp.task('extend-blocks', function () {
 
 gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], function () {
     gulp.watch('app/libs/**/*', ['css-libs']); // Наблюдение за папкой libs
-    gulp.watch('app/images/**/*', ['img']);// Наблюдение за папкой images
+    gulp.watch('app/img/**/*', ['img']);// Наблюдение за папкой img
     gulp.watch('app/sass/**/*.scss', ['sass']); // Наблюдение за sass файлами в папке sass
     gulp.watch(['app/html/**/*.html'], ['extend-pages']);// Наблюдение за HTML-файлами в папке html
     gulp.watch('app/js/**/*.js', ['compress']); // Наблюдение за js-файлами
@@ -130,15 +131,13 @@ gulp.task('watch', ['compress', 'extend-pages', 'css-libs', 'img', 'sass'], func
 
 gulp.task('img', function () {
     return gulp.src('app/img/**/*')
-        .pipe(cache(imagemin({
+        .pipe(imagemin({
             interlaced: true,
             progressive: true,
-            svgoPlugins: [{
-                removeViewBox: false
-            }],
-            use: [pngquant()]
-        })))
-        .pipe(gulp.dest('images'))
+            optimizationLevel: 5,
+            svgoPlugins: [{removeViewBox: true}]
+        }))
+        .pipe(gulp.dest('img'))
         .pipe(browserSync.reload({
             stream: true
         }));
