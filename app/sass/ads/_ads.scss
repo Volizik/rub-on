@@ -1,0 +1,21 @@
+.ad-concrete{
+  display: block;
+  position: relative;
+  float: left;
+  width: 100%;
+  &__title{
+    text-align: left;
+    width: 80%;
+    float: left;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    margin: 15px 0;
+    text-transform: uppercase;
+    padding: 10px 0;
+    box-sizing: border-box;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+  }
+}
+
