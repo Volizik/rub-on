@@ -24,6 +24,9 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      @include breakpoint(max-width 992px){
+        display: none;
+      }
     }
     .logo {
       display: block;
